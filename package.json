@@ -1,0 +1,27 @@
+{
+  "name": "concert",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@b9g/crank": "^0.5.7",
+    "@ffmpeg/ffmpeg": "^0.12.10",
+    "@ffmpeg/util": "^0.12.1",
+    "wasm-imagemagick": "^1.2.8"
+  },
+  "devDependencies": {
+    "@kristiandupont/dev-deps": "^2.5.0",
+    "@tsconfig/recommended": "^1.0.2",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.27",
+    "tailwindcss": "^3.3.3"
+  }
+}
