@@ -1,3 +1,13 @@
 {
-  "extends": "@kristiandupont"
+  "extends": "@kristiandupont",
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "parserOptions": {
+        "createDefaultProgram": true,
+        "project": "./tsconfig.json",
+        "sourceType": "module"
+      }
+    }
+  ]
 }

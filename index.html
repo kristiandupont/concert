@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Load https://github.com/gzuidhof/coi-serviceworker to enable SharedArrayBuffer: -->
+    <script src="/coi-serviceworker.js"></script>
+
     <title>Concert</title>
-    <script type="module">
-      import * as Magick from 'https://knicknic.github.io/wasm-imagemagick/magickApi.js';
-      window.magick = Magick;
-    </script>
   </head>
   <body>
     <div id="root"></div>

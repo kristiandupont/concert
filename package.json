@@ -6,7 +6,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "vite",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint . -f visualstudio --report-unused-disable-directives --ext .js,.jsx,.ts,.tsx",
+    "build": "vite build"
   },
   "keywords": [],
   "author": "",
@@ -15,10 +16,11 @@
     "@b9g/crank": "^0.5.7",
     "@ffmpeg/ffmpeg": "^0.12.10",
     "@ffmpeg/util": "^0.12.1",
-    "wasm-imagemagick": "^1.2.8"
+    "@xn-sakina/image-magick": "^1.0.0"
   },
   "devDependencies": {
-    "@kristiandupont/dev-deps": "^2.5.0",
+    "@ffmpeg/types": "^0.12.2",
+    "@kristiandupont/dev-deps": "^2.22.0",
     "@tsconfig/recommended": "^1.0.2",
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.27",

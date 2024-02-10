@@ -1,7 +1,11 @@
 {
   "extends": "@tsconfig/recommended/tsconfig.json",
   "compilerOptions": {
+    "lib": ["ESNext", "DOM"],
     "jsx": "react-jsx",
-    "jsxImportSource": "@b9g/crank"
+    "jsxImportSource": "@b9g/crank",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "types": ["vite/client", "crank"]
   }
 }

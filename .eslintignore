@@ -1,0 +1,6 @@
+docs
+public
+
+vite.config.ts
+vitest.config.ts
+tailwind.config.js

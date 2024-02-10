@@ -1,4 +1,4 @@
-import { Context } from "@b9g/crank";
+import { Context, Element } from "@b9g/crank";
 
 // Config:
 const framerate = 30;
@@ -18,8 +18,8 @@ type Node = {
 function initializeNodes(rows: number, cols: number, initialZ = 0): Node[][] {
   const nodes = new Array(rows)
     .fill(0)
-    .map((_, i) =>
-      new Array(cols).fill(0).map((_, j) => ({ z: initialZ, velocity: 0 }))
+    .map(() =>
+      new Array(cols).fill(0).map(() => ({ z: initialZ, velocity: 0 })),
     );
 
   return nodes;
@@ -32,13 +32,13 @@ function updateNodes(nodes: Node[][]) {
       for (let dx = -1; dx <= 1; dx++) {
         for (let dy = -1; dy <= 1; dy++) {
           if (dx === 0 && dy === 0) continue;
-          let ni = i + dx;
-          let nj = j + dy;
+          const ni = i + dx;
+          const nj = j + dy;
           if (ni < 0 || ni >= nodes.length || nj < 0 || nj >= nodes[i].length)
             continue;
 
-          let neighbor = nodes[ni][nj];
-          let difference = nodes[i][j].z - neighbor.z;
+          const neighbor = nodes[ni][nj];
+          const difference = nodes[i][j].z - neighbor.z;
           distances.push(difference);
         }
       }
@@ -64,7 +64,7 @@ function updateNodes(nodes: Node[][]) {
   }
 }
 
-export function* Wave(this: Context) {
+export function* Wave(this: Context): Generator<Element> {
   const nodes = initializeNodes(rows, cols);
 
   while (true) {
@@ -93,7 +93,7 @@ export function* Wave(this: Context) {
               stroke="white"
               stroke-width={0.02 * node.z + 0.1}
             />
-          ))
+          )),
         )}
       </svg>
     );
