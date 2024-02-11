@@ -36,7 +36,8 @@ function* RoutedPanel(this: Context) {
 
   try {
     while (true) {
-      const path = window.location.pathname;
+      const basePath = import.meta.env.BASE_URL;
+      const path = window.location.pathname.substring(basePath.length) || "/";
       const Route = routes[path];
       yield (
         <div class="flex h-screen flex-col">
@@ -60,6 +61,6 @@ const App = () => (
     <div>
       <App />
     </div>,
-    document.body,
+    document.body
   );
 })();
