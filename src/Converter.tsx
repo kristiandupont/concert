@@ -1,4 +1,4 @@
-import { Context, Element } from "@b9g/crank";
+import type { Context, Element } from "@b9g/crank";
 
 import { convertAudioOrVideo } from "./convertAudioOrVideo";
 import { convertImage } from "./convertImage";

@@ -1,6 +1,6 @@
 import "./Spinner.css";
 
-import { Element } from "@b9g/crank";
+import type { Element } from "@b9g/crank";
 
 const Spinner = (): Element => (
   <div class={"sk-chase w-5 h-5 text-gray-700 dark:text-slate-300"}>

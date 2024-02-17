@@ -1,7 +1,7 @@
 /** @jsxImportSource @b9g/crank */
 import "./main.css";
 
-import { Component, Context } from "@b9g/crank";
+import type { Component, Context } from "@b9g/crank";
 import { renderer } from "@b9g/crank/dom";
 
 import { Wave } from "./Wave";
@@ -61,6 +61,6 @@ const App = () => (
     <div>
       <App />
     </div>,
-    document.body
+    document.body,
   );
 })();

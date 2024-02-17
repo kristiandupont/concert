@@ -1,4 +1,4 @@
-import { Element } from "@b9g/crank";
+import type { Element } from "@b9g/crank";
 
 export function FileDropZone({
   onFilesDropped,
