@@ -13,7 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@b9g/crank": "^0.5.7",
+    "@b9g/crank": "^0.6.0",
     "@ffmpeg/ffmpeg": "^0.12.10",
     "@ffmpeg/util": "^0.12.1",
     "@xn-sakina/image-magick": "^1.0.0"
