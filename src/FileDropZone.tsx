@@ -25,7 +25,7 @@ export function FileDropZone({
 
   return (
     <div
-      className="flex h-64 w-full items-center shadow-2xl text-2xl font-bold justify-center rounded-xl border-4 border-dotted border-cyan-300 bg-cyan-400/60 text-white backdrop-blur-sm"
+      class="flex h-64 w-full items-center shadow-2xl text-2xl font-bold justify-center rounded-xl border-4 border-dotted border-cyan-300 bg-cyan-400/60 text-white backdrop-blur-sm"
       ondragover={handleDragOver}
       ondrop={handleDrop}
     >

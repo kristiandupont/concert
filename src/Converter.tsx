@@ -29,7 +29,7 @@ function FileSizeLabel({ fileSize }: { fileSize: number }) {
 
 export function* Converter(
   this: Context,
-  { files }: { files: File[] },
+  { files }: { files: File[] }
 ): Generator<Element> {
   const fileType = getFileType(files[0]);
 
@@ -86,7 +86,7 @@ export function* Converter(
   while (true) {
     yield (
       <div class="flex flex-col w-full h-full items-center justify-start space-y-6">
-        <div className="flex flex-col py-6 w-full items-start px-8 shadow-2xl justify-center rounded-xl border-2 border-cyan-300 bg-cyan-400/80 text-white backdrop-blur-sm">
+        <div class="flex flex-col py-6 w-full items-start px-8 shadow-2xl justify-center rounded-xl border-2 border-cyan-300 bg-cyan-400/80 text-white backdrop-blur-sm">
           <div class="flex flex-col space-y-2 w-full">
             {filesWithState.map((fs) => (
               <div class="flex flex-row items-center justify-between w-full">
@@ -116,7 +116,7 @@ export function* Converter(
               <div>
                 <select
                   onchange={onOptionChange}
-                  className="bg-cyan-600 px-2 py-0.5 rounded"
+                  class="bg-cyan-600 px-2 py-0.5 rounded"
                 >
                   {conversionOptions.map((option) => (
                     <option value={option}>{option}</option>
@@ -125,7 +125,7 @@ export function* Converter(
               </div>
             </div>
             <button
-              className="flex flex-row items-center justify-center w-full h-10 rounded-xl bg-pink-500/90 border-pink-400 border-2 text-white text-bold backdrop-blur-sm"
+              class="flex flex-row items-center justify-center w-full h-10 rounded-xl bg-pink-500/90 border-pink-400 border-2 text-white text-bold backdrop-blur-sm"
               onclick={startConversion}
             >
               Convert

@@ -19,7 +19,7 @@ function initializeNodes(rows: number, cols: number, initialZ = 0): Node[][] {
   const nodes = new Array(rows)
     .fill(0)
     .map(() =>
-      new Array(cols).fill(0).map(() => ({ z: initialZ, velocity: 0 })),
+      new Array(cols).fill(0).map(() => ({ z: initialZ, velocity: 0 }))
     );
 
   return nodes;
@@ -80,7 +80,7 @@ export function* Wave(this: Context): Generator<Element> {
 
     yield (
       <svg
-        className="absolute h-full w-full"
+        class="absolute h-full w-full"
         viewBox={`0 0 ${cols * 5} ${rows * 5}`}
       >
         {nodes.map((row, y) =>
@@ -93,7 +93,7 @@ export function* Wave(this: Context): Generator<Element> {
               stroke="white"
               stroke-width={0.02 * node.z + 0.1}
             />
-          )),
+          ))
         )}
       </svg>
     );

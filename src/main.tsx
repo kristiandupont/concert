@@ -10,10 +10,10 @@ import { Wizard } from "./Wizard";
 const Home = () => (
   <div class="flex h-screen flex-col bg-cyan-700">
     <Wave />
-    <div className="absolute left-0 top-0 flex h-full w-full items-center justify-center overflow-y-auto">
-      <div className="flex flex-col items-center justify-start py-12 h-full w-full max-w-screen-md space-y-12">
+    <div class="absolute left-0 top-0 flex h-full w-full items-center justify-center overflow-y-auto">
+      <div class="flex flex-col items-center justify-start py-12 h-full w-full max-w-screen-md space-y-12">
         <h1
-          className="text-8xl bg-orange-400 rounded-xl w-full text-center py-6 text-white shadow-2xl select-none"
+          class="text-8xl bg-orange-400 rounded-xl w-full text-center py-6 text-white shadow-2xl select-none"
           style={{ "font-family": "Rubik Doodle Shadow" }}
         >
           Concert
@@ -61,6 +61,6 @@ const App = () => (
     <div>
       <App />
     </div>,
-    document.body,
+    document.body
   );
 })();
