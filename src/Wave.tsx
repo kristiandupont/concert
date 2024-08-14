@@ -9,8 +9,6 @@ const rows = 14;
 const cols = 20;
 
 type Node = {
-  // x: number;
-  // y: number;
   z: number;
   velocity: number;
 };
